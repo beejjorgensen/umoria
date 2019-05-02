@@ -362,7 +362,7 @@ static void monsterConfuseOnAttack(Creature_t const &creature, Monster_t &monste
         printMessage("Your hands stop glowing.");
         py.flags.confuse_monster = false;
 
-        vtype_t msg = {'\0'};
+        vtype_output_t msg = {'\0'};
 
         if (randomNumber(MON_MAX_LEVELS) < creature.level || ((creature.defenses & config::monsters::defense::CD_NO_SLEEP) != 0)) {
             (void) sprintf(msg, "%sis unaffected.", monster_name);

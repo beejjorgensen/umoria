@@ -24,8 +24,10 @@ constexpr char *CNIL = 0;
 // length fields have been replaced with variable length ones.
 constexpr uint8_t MORIA_MESSAGE_SIZE = 80;
 typedef char vtype_t[MORIA_MESSAGE_SIZE];
+typedef char vtype_output_t[MORIA_MESSAGE_SIZE * 2];
 
 // Note: since its output can easily exceed 80 characters,
 // an object description must always be called with an
 // obj_desc_t type as the first parameter.
 typedef char obj_desc_t[160];
+typedef char obj_desc_output_t[320];

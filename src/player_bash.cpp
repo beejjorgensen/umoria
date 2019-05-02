@@ -110,7 +110,7 @@ static void playerBashAttack(int y, int x) {
     }
 
     if (playerTestBeingHit(base_to_hit, (int) py.misc.level, (int) py.stats.used[py_attrs::A_DEX], (int) creature.ac, py_class_level_adj::CLASS_BTH)) {
-        vtype_t msg = {'\0'};
+        vtype_output_t msg = {'\0'};
         (void) sprintf(msg, "You hit %s.", name);
         printMessage(msg);
 
@@ -153,7 +153,7 @@ static void playerBashAttack(int y, int x) {
             printMessage(msg);
         }
     } else {
-        vtype_t msg = {'\0'};
+        vtype_output_t msg = {'\0'};
         (void) sprintf(msg, "You miss %s.", name);
         printMessage(msg);
     }

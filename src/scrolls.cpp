@@ -93,7 +93,7 @@ static bool scrollEnchantWeaponToHit() {
         return false;
     }
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -117,7 +117,7 @@ static bool scrollEnchantWeaponToDamage() {
         return false;
     }
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -153,7 +153,7 @@ static bool scrollEnchantItemToAC() {
 
     Inventory_t &item = inventory[item_id];
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -232,7 +232,7 @@ static bool scrollEnchantWeapon() {
         return false;
     }
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -280,7 +280,7 @@ static bool scrollCurseWeapon() {
         return false;
     }
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -312,7 +312,7 @@ static bool scrollEnchantArmor() {
 
     Inventory_t &item = inventory[item_id];
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 
@@ -374,7 +374,7 @@ static bool scrollCurseArmor() {
 
     Inventory_t &item = inventory[item_id];
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     obj_desc_t desc = {'\0'};
     itemDescription(desc, item, false);
 

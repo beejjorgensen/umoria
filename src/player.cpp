@@ -643,7 +643,7 @@ void playerTakeOff(int item_id, int pack_position_id) {
     obj_desc_t description = {'\0'};
     itemDescription(description, item, true);
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     if (pack_position_id >= 0) {
         (void) sprintf(msg, "%s%s (%c)", p, description, 'a' + pack_position_id);
     } else {
@@ -731,7 +731,7 @@ void playerSearch(int y, int x, int chance) {
                 obj_desc_t description = {'\0'};
                 itemDescription(description, item, true);
 
-                obj_desc_t msg = {'\0'};
+                obj_desc_output_t msg = {'\0'};
                 (void) sprintf(msg, "You have found %s", description);
                 printMessage(msg);
 
@@ -1159,7 +1159,7 @@ static void playerAttackMonster(int y, int x) {
     int base_to_hit = playerCalculateBaseToHit(monster.lit, total_to_hit);
 
     int damage;
-    vtype_t msg = {'\0'};
+    vtype_output_t msg = {'\0'};
 
     // Loop for number of blows, trying to hit the critter.
     // Note: blows will always be greater than 0 at the start of the loop -MRC-

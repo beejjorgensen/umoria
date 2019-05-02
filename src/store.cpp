@@ -132,7 +132,7 @@ static void displayStoreInventory(Store_t &store, int item_pos_start) {
         // Restore the number of items
         item.items_count = (uint8_t) current_item_count;
 
-        obj_desc_t msg = {'\0'};
+        obj_desc_output_t msg = {'\0'};
         (void) sprintf(msg, "%c) %s", 'a' + item_identifier, description);
         putStringClearToEOL(msg, Coord_t{item_identifier + 5, 0});
 
@@ -808,7 +808,7 @@ static bool storePurchaseAnItem(int store_id, int &current_top_item_id) {
             obj_desc_t description = {'\0'};
             itemDescription(description, inventory[new_item_id], true);
 
-            obj_desc_t msg = {'\0'};
+            obj_desc_output_t msg = {'\0'};
             (void) sprintf(msg, "You have %s (%c)", description, new_item_id + 'a');
             putStringClearToEOL(msg, Coord_t{0, 0});
 
@@ -984,7 +984,7 @@ static bool storeSellAnItem(int store_id, int &current_top_item_id) {
     obj_desc_t description = {'\0'};
     itemDescription(description, sold_item, true);
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     (void) sprintf(msg, "Selling %s (%c)", description, item_id + 'a');
     printMessage(msg);
 

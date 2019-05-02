@@ -343,7 +343,7 @@ static bool verify(const char *prompt, int item) {
     // change the period to a question mark
     description[strlen(description) - 1] = '?';
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     (void) sprintf(msg, "%s %s", prompt, description);
 
     return getInputConfirmation(msg);
@@ -451,7 +451,7 @@ static void inventoryUnwieldItem() {
         obj_desc_t description = {'\0'};
         itemDescription(description, inventory[player_equipment::EQUIPMENT_WIELD], false);
 
-        obj_desc_t msg = {'\0'};
+        obj_desc_output_t msg = {'\0'};
         (void) sprintf(msg, "The %s you are wielding appears to be cursed.", description);
 
         printMessage(msg);
@@ -634,7 +634,7 @@ static void inventoryItemIsCursedMessage(int itemID) {
     obj_desc_t description = {'\0'};
     itemDescription(description, inventory[itemID], false);
 
-    obj_desc_t itemText = {'\0'};
+    obj_desc_output_t itemText = {'\0'};
     (void) sprintf(itemText, "The %s you are ", description);
 
     if (itemID == player_equipment::EQUIPMENT_HEAD) {
@@ -870,7 +870,7 @@ static bool selectItemCommands(char *command, char *which, bool selecting) {
                     }
                 }
 
-                obj_desc_t msg = {'\0'};
+                obj_desc_output_t msg = {'\0'};
                 (void) sprintf(msg, "%s %s (%c)", text, description, 'a' + item_id);
                 printMessage(msg);
 
@@ -899,7 +899,7 @@ static bool selectItemCommands(char *command, char *which, bool selecting) {
                 itemDescription(description, inventory[item_id], true);
                 description[strlen(description) - 1] = '?';
 
-                obj_desc_t msg = {'\0'};
+                obj_desc_output_t msg = {'\0'};
                 (void) sprintf(msg, "Drop all %s [y/n]", description);
                 msg[strlen(description) - 1] = '.';
 

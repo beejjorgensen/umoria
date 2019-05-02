@@ -62,7 +62,7 @@ set(cxx_warnings "${cxx_warnings} -Wwrite-strings")
 
 # Temporary support for GCC 8.
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    set(cxx_warnings "${cxx_warnings} -Wno-format-overflow")
+    set(cxx_warnings "${cxx_warnings} -Wformat-overflow")
 endif()
 
 #

@@ -372,7 +372,7 @@ static void carry(int y, int x, bool pickup) {
     }
 
     obj_desc_t description = {'\0'};
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
 
     playerEndRunning();
 

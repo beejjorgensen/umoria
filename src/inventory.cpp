@@ -86,7 +86,7 @@ void inventoryDropItem(int item_id, bool drop_all) {
         }
 
         obj_desc_t prt1 = {'\0'};
-        obj_desc_t prt2 = {'\0'};
+        obj_desc_output_t prt2 = {'\0'};
         itemDescription(prt1, treasure_list[treasureID], true);
         (void) sprintf(prt2, "Dropped %s", prt1);
         printMessage(prt2);
@@ -405,7 +405,7 @@ static bool damageMinusAC(uint32_t typ_dam) {
     int itemID = items[randomNumber(itemsCount) - 1];
 
     obj_desc_t description = {'\0'};
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
 
     if ((inventory[itemID].flags & typ_dam) != 0u) {
         minus = true;

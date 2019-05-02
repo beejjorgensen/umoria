@@ -145,7 +145,7 @@ static void inventoryDropOrThrowItem(int y, int x, Inventory_t *item) {
         dungeonLiteSpot(Coord_t{pos_y, pos_x});
     } else {
         obj_desc_t description = {'\0'};
-        obj_desc_t msg = {'\0'};
+        obj_desc_output_t msg = {'\0'};
         itemDescription(description, *item, false);
 
         (void) sprintf(msg, "The %s disappears.", description);
@@ -229,7 +229,7 @@ void playerThrowItem() {
                     int damage = m_ptr.creature_id;
 
                     obj_desc_t description = {'\0'};
-                    obj_desc_t msg = {'\0'};
+                    obj_desc_output_t msg = {'\0'};
                     itemDescription(description, thrown_item, false);
 
                     // Does the player know what they're fighting?

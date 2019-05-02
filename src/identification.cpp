@@ -880,7 +880,7 @@ void itemTypeRemainingCountDescription(int item_id) {
     item.items_count++;
 
     // the string already has a dot at the end.
-    obj_desc_t out_val = {'\0'};
+    obj_desc_output_t out_val = {'\0'};
     (void) sprintf(out_val, "You have %s", tmp_str);
     printMessage(out_val);
 }
@@ -900,7 +900,7 @@ void itemInscribe() {
     obj_desc_t msg = {'\0'};
     itemDescription(msg, inventory[item_id], true);
 
-    obj_desc_t inscription = {'\0'};
+    obj_desc_output_t inscription = {'\0'};
     (void) sprintf(inscription, "Inscribing %s", msg);
 
     printMessage(inscription);
@@ -935,7 +935,7 @@ void itemReplaceInscription(Inventory_t &item, const char *inscription) {
 
 void objectBlockedByMonster(int monster_id) {
     vtype_t description = {'\0'};
-    vtype_t msg = {'\0'};
+    vtype_output_t msg = {'\0'};
 
     Monster_t const &monster = monsters[monster_id];
     const char *name = creatures_list[monster.creature_id].name;

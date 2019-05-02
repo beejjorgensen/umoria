@@ -1498,7 +1498,7 @@ static void commandLocateOnMap() {
     cx = dg.panel.col;
 
     int dir_val;
-    vtype_t out_val = {'\0'};
+    vtype_output_t out_val = {'\0'};
     vtype_t tmp_str = {'\0'};
 
     while (true) {

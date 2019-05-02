@@ -396,7 +396,7 @@ bool spellIdentifyItem() {
     obj_desc_t description = {'\0'};
     itemDescription(description, item, true);
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
     if (item_id >= player_equipment::EQUIPMENT_WIELD) {
         playerRecalculateBonuses();
         (void) sprintf(msg, "%s: %s", playerItemWearingDescription(item_id), description);
@@ -1364,7 +1364,7 @@ bool spellWallToMud(int y, int x, int direction) {
                 obj_desc_t description = {'\0'};
                 itemDescription(description, treasure_list[tile.treasure_id], false);
 
-                obj_desc_t out_val = {'\0'};
+                obj_desc_output_t out_val = {'\0'};
                 (void) sprintf(out_val, "The %s turns into mud.", description);
                 printMessage(out_val);
             }

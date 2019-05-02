@@ -497,7 +497,7 @@ static bool lookSee(int x, int y, bool &transparent) {
     // a warning. Perhaps we can set it to `ESCAPE` here as default. -MRC-
     char query = ESCAPE;
 
-    obj_desc_t msg = {'\0'};
+    obj_desc_output_t msg = {'\0'};
 
     if (los_rocks_and_objects == 0 && tile.creature_id > 1 && monsters[tile.creature_id].lit) {
         j = monsters[tile.creature_id].creature_id;
